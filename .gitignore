@@ -1,0 +1,14 @@
+# Windows system files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# VS Code settings
+.vscode/
+
+# Temporary files
+*.log
+*.tmp
+
+# Folder where you might keep your raw design files (optional)
+# drafts/
