@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book Now | KB Cars Reading</title>
+
+  <!-- Link CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap">
+
+  <!-- Font Awesome for icons -->
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  crossorigin="anonymous"
+/>
+
+</head>
+<body class="page-book-now">
+
+<!-- TOP INFO BAR -->
+<div class="top-bar">
+  <div class="top-bar-left">
+    <span>
+      <i class="fa-solid fa-phone"></i>
+      <a href="tel:+441234567890">+44 1234 567 890</a>
+    </span>
+    <span>
+      <i class="fa-solid fa-envelope"></i>
+      <a href="mailto:info@kbcarsreading.co.uk">info@kbcarsreading.co.uk</a>
+    </span>
+  </div>
+
+  <div class="top-bar-right">
+    <i class="fa-solid fa-clock"></i>
+    <span>24/7 Service Available</span>
+  </div>
+</div>
+
+
+  <!-- HEADER -->
+<header>
+  <div class="logo reveal zoom-in">
+    <a href="index.html">
+      <img src="images/transparent-logo.png" alt="KB Cars Reading Logo">
+    </a>
+    <div class="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <nav>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="airport-express.html">Airport Express</a></li>
+      <li><a href="kidz-commute.html">Kidz Commute</a></li>
+      <li><a href="accessible.html">Wheelchair Accessible Taxi</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li class="nav-book"><a href="book-now.html">Book Now</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+<section class="services-hero">
+  <h1>Book Your <span class="gold-text">Journey</span></h1>
+  <p class="intro">
+    Fill in your details below and we'll confirm your booking shortly.
+  </p>
+</section>
+
+
+<main>
+
+
+<!-- GOOGLE FONT -->
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- FONT AWESOME -->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<section class="kb-booking-section">
+  <div class="kb-booking-card reveal">
+
+    <form class="kb-booking-form reveal" action="https://formsubmit.co/info@kbcarsreading.co.uk" method="POST">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+
+      <!-- SERVICE TYPE -->
+      <h3 class="kb-booking-title">
+        <i class="fa-solid fa-car kb-booking-gold-icon"></i>
+        Choose Your Service
+      </h3>
+      <p class="kb-booking-desc">Select the type of journey you require</p>
+
+      <div class="kb-booking-service-grid ">
+        <input type="radio" id="service-airport" name="Service Type" value="Airport Express" required>
+        <label for="service-airport" class="kb-booking-service-option reveal fade-left">
+          <i class="fa-solid fa-plane-arrival"></i>
+          <span>Airport Express</span>
+        </label>
+
+        <input type="radio" id="service-kidz" name="Service Type" value="Kidz Commute">
+        <label for="service-kidz" class="kb-booking-service-option reveal fade-left">
+          <i class="fa-solid fa-child"></i>
+          <span>Kidz Commute</span>
+        </label>
+
+        <input type="radio" id="service-local" name="Service Type" value="Local Journey">
+        <label for="service-local" class="kb-booking-service-option reveal zoom-in">
+          <i class="fa-solid fa-location-dot"></i>
+          <span>Local Journey</span>
+        </label>
+
+        <input type="radio" id="service-long" name="Service Type" value="Long Distance">
+        <label for="service-long" class="kb-booking-service-option reveal fade-right">
+          <i class="fa-solid fa-road"></i>
+          <span>Long Distance</span>
+        </label>
+
+        <input type="radio" id="service-corporate" name="Service Type" value="Corporate">
+        <label for="service-corporate" class="kb-booking-service-option reveal fade-right">
+          <i class="fa-solid fa-briefcase"></i>
+          <span>Corporate</span>
+        </label>
+      </div>
+
+      <!-- JOURNEY DETAILS -->
+      <h3 class="kb-booking-title reveal zoom-in"><i class="fa-solid fa-map-location-dot kb-booking-gold-icon"></i> Journey Details</h3>
+
+      <div class="kb-booking-row">
+        <div class="kb-booking-group ">
+          <label class="reveal fade-left">Pickup Address *</label>
+          <input type="text" name="Pickup Address" required>
+        </div>
+        <div class="kb-booking-group">
+          <label class="reveal fade-right">Drop-off Address *</label>
+          <input type="text" name="Dropoff Address" required>
+        </div>
+      </div>
+
+      <div class="kb-booking-row">
+        <div class="kb-booking-group">
+          <label class="reveal fade-left">Pickup Date *</label>
+          <input type="date" name="Pickup Date" required>
+        </div>
+        <div class="kb-booking-group">
+          <label class="reveal fade-right">Pickup Time *</label>
+          <input type="time" name="Pickup Time" required>
+        </div>
+      </div>
+
+      <div class="kb-booking-row">
+        <div class="kb-booking-group">
+          <label class="reveal fade-left">Passengers</label>
+          <input type="number" name="Passengers" min="1" value="1">
+        </div>
+        <div class="kb-booking-group">
+          <label class="reveal fade-right">Luggage</label>
+          <input type="number" name="Luggage" min="0" value="0">
+        </div>
+      </div>
+
+      <!-- CONTACT DETAILS -->
+      <h3 class="kb-booking-title reveal zoom-in"><i class="fa-solid fa-user kb-booking-gold-icon"></i> Your Details</h3>
+
+      <div class="kb-booking-row">
+        <div class="kb-booking-group">
+          <label class="reveal fade-left">Full Name *</label>
+          <input type="text" name="Full Name" required>
+        </div>
+        <div class="kb-booking-group">
+          <label class="reveal fade-right">Phone *</label>
+          <input type="tel" name="Phone" required>
+        </div>
+      </div>
+
+      <div class="kb-booking-row kb-booking-single">
+        <div class="kb-booking-group">
+          <label class="reveal zoom-in">Email *</label>
+          <input type="email" name="Email" required>
+        </div>
+      </div>
+
+      <!-- SPECIAL REQUESTS -->
+      <h3 class="kb-booking-title reveal zoom-in"><i class="fa-solid fa-list-check kb-booking-gold-icon"></i> Special Requests</h3>
+      <div class="kb-booking-group">
+        <label class="reveal zoom-in">Notes</label>
+        <textarea name="Special Requests"></textarea>
+      </div>
+
+      <button type="submit" class="kb-booking-btn reveal zoom-in">Submit Booking</button>
+
+      <p class="kb-booking-info ">
+        We'll confirm your booking within 30 minutes.<br>
+        Call <a href="tel:01189951221">0118 995 1221</a> or 
+        email <a href="mailto:info@kbcarsreading.co.uk">info@kbcarsreading.co.uk</a>
+      </p>
+    </form>
+  </div>
+</section>
+
+
+</main>
+
+
+  <!-- FOOTER -->
+<footer id="contact" class="reveal fade-up">
+  <div class="footer-container">
+    
+    <div class="footer-column footer-left">
+      <h3>Get In Touch</h3>
+      <p>KB Cars Reading</p>
+      <p>Serving Reading & Surrounding Areas</p>
+      <p><i class="fa-solid fa-phone"></i> <a href="tel:01189951221">0118 995 1221</a></p>
+      <p><i class="fa-solid fa-envelope"></i> <a href="mailto:info@kbcarsreading.co.uk">info@kbcarsreading.co.uk</a></p>
+      <p><i class="fa-solid fa-building"></i> <a>82 Basingstoke Road, Reading, RG2 0EL</a></p>
+    </div>
+
+    <div class="footer-column footer-center">
+      <div class="footer-logo">
+        <a href="index.html">
+          <img src="images/transparent-logo.png" alt="KB Cars Reading Logo">
+        </a>
+      </div>
+      <p class="footer-tagline">
+        Your trusted private hire service in Reading. Professional, reliable, and always on time.
+      </p>
+      <div class="footer-socials">
+        <a href="https://instagram.com/kbcarsreading" target="_blank" aria-label="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://tiktok.com/@kbcars.reading" target="_blank" aria-label="TikTok">
+          <i class="fa-brands fa-tiktok"></i>
+        </a>
+      </div>
+    </div>
+
+<div class="footer-column footer-right">
+  <h3>Our Policies</h3>
+  <ul>
+    <li><a href="policies.html#privacy">Privacy Policy</a></li>
+    <li><a href="policies.html#terms">Terms & Conditions</a></li>
+  </ul>
+</div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2026 KB Cars Reading. All rights reserved.</p>
+  </div>
+</footer>
+
+  <!-- Link JS -->
+  <script src="script.js"></script>
+</body>
+</html>
