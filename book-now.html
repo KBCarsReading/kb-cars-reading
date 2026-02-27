@@ -92,7 +92,8 @@
     <section class="kb-booking-section">
       <div class="kb-booking-card reveal">
 
-        <form class="kb-booking-form reveal" action="https://formsubmit.co/info@kbcarsreading.co.uk" method="POST">
+        <form id="booking-form" class="kb-booking-form reveal" action="https://formsubmit.co/info@kbcarsreading.co.uk"
+          method="POST">
           <input type="hidden" name="_captcha" value="false">
           <input type="hidden" name="_template" value="table">
 
@@ -205,13 +206,13 @@
           <!-- STOPS CATPTCHA -->
           <input type="text" name="_honey" style="display:none">
 
-            <button type="submit" class="kb-booking-btn reveal zoom-in">Submit Booking</button>
-
-            <p class="kb-booking-info ">
-              We'll confirm your booking within 30 minutes.<br>
-              Call <a href="tel:01189951221">0118 995 1221</a> or
-              email <a href="mailto:info@kbcarsreading.co.uk">info@kbcarsreading.co.uk</a>
-            </p>
+          <button type="submit" class="kb-booking-btn reveal zoom-in">Submit Booking</button>
+          <p id="form-message" class="form-message"></p>
+          <p class="kb-booking-info ">
+            We'll confirm your booking within 30 minutes.<br>
+            Call <a href="tel:01189951221">0118 995 1221</a> or
+            email <a href="mailto:info@kbcarsreading.co.uk">info@kbcarsreading.co.uk</a>
+          </p>
         </form>
       </div>
     </section>
