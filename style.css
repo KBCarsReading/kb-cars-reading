@@ -4584,3 +4584,33 @@ footer {
     background: linear-gradient(to right, transparent, var(--accent-gold), transparent);
     margin: 4rem 0;
 }
+
+
+/* Booking form message */
+.form-message {
+    display: none;
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Success message */
+.form-message.success {
+    color: green;
+}
+
+/* Error message */
+.form-message.error {
+    color: red;
+}
+
+/* Disabled submit button */
+button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+#form-message {
+    padding: 10px;
+    border-radius: 6px;
+    text-align: center;
+}
