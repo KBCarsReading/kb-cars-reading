@@ -22,20 +22,75 @@ document.addEventListener("DOMContentLoaded", function () {
   // --- BOOKING FORM LOGIC ---
   // In your HTML, your form class is "quick-booking". 
   // Let's target that instead of the ID to be safe.
-  const bookingForm = document.querySelector('.quick-booking');
+  // const bookingForm = document.querySelector('.quick-booking');
   
-  if (bookingForm) {
-    bookingForm.addEventListener('submit', function(e) {
-      // Note: Since you are using formsubmit.co, 
-      // e.preventDefault() might stop the email from sending.
-      // Only use preventDefault() if you are handling the email via AJAX/Fetch.
+  // if (bookingForm) {
+  //   bookingForm.addEventListener('submit', function(e) {
+  //     // Note: Since you are using formsubmit.co, 
+  //     // e.preventDefault() might stop the email from sending.
+  //     // Only use preventDefault() if you are handling the email via AJAX/Fetch.
       
-      console.log("Form submitted!");
-      // If you have a success message div, show it here:
-      const successMsg = document.getElementById('form-success');
-      if (successMsg) successMsg.style.display = 'block';
+  //     console.log("Form submitted!");
+  //     // If you have a success message div, show it here:
+  //     const successMsg = document.getElementById('form-success');
+  //     if (successMsg) successMsg.style.display = 'block';
+  //   });
+// }
+
+
+
+
+  // --- AJAX BOOKING FORM ---
+const form = document.getElementById("booking-form");
+const message = document.getElementById("form-message");
+
+if (form) {
+
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const submitButton = form.querySelector("button[type='submit']");
+
+    submitButton.disabled = true;
+    submitButton.innerText = "Sending...";
+
+    fetch(form.action, {
+      method: "POST",
+      body: new FormData(form),
+      headers: {
+        "Accept": "application/json"
+      }
+    })
+    .then(response => {
+      if (response.ok) {
+
+        message.style.display = "block";
+        message.style.color = "green";
+        message.innerText = "✅ Booking sent successfully!";
+
+        form.reset();
+
+      } else {
+        throw new Error();
+      }
+    })
+    .catch(() => {
+
+      message.style.display = "block";
+      message.style.color = "red";
+      message.innerText = "❌ Error sending booking. Try again.";
+
+    })
+    .finally(() => {
+
+      submitButton.disabled = false;
+      submitButton.innerText = "Send Booking";
+
     });
-  }
+
+  });
+
+}
 
   // --- SCROLL REVEAL LOGIC ---
   const revealElements = document.querySelectorAll(".reveal");
